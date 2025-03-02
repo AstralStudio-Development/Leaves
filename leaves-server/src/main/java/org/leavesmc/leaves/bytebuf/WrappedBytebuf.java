@@ -10,6 +10,7 @@ import net.minecraft.network.chat.ComponentSerialization;
 import net.minecraft.server.MinecraftServer;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.craftbukkit.inventory.CraftItemStack;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 import java.util.UUID;
@@ -266,7 +267,7 @@ public class WrappedBytebuf implements Bytebuf {
     }
 
     @Override
-    public Bytebuf copy() {
+    public @NotNull Bytebuf copy() {
         return new WrappedBytebuf(this.buf.copy());
     }
 
